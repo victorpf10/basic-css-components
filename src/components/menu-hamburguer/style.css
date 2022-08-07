@@ -1,0 +1,40 @@
+#checkbox {
+    display: none;
+}
+.hamburguer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+}
+
+.line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform .25s, opacity .35s;
+}
+.line--top {
+    transform: translateY(-7px);
+}
+.line--bottom {
+    transform: translateY(7px);
+}
+#checkbox:checked ~ .line--top {
+    transform: rotate(45deg) translate(0, 0);
+}
+#checkbox:checked ~ .line--middle {
+    transform: translateX(16px);
+    opacity: 0;
+}
+#checkbox:checked ~ .line--bottom {
+    transform: rotate(-45deg) translate(0, 0);
+}
