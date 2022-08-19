@@ -1,14 +1,14 @@
-import React from 'react'
-import MenuHamburguer from './components/menu-hamburguer/MenuHamburguer'
+import MenuHamburguerManagement from "./components/menu-hamburguer/MenuHamburguerManagement";
+import InputAnimationManagement from "./components/input-animation/InputAnimationManagement";
 
 const App = () => {
 
-  const handleClickHamburguer = (e) => {    
-    console.log("You clicked the hamburguer");
-  }
+
+
   return (
-    <div>
-      <MenuHamburguer  onClick={handleClickHamburguer}/>
+    <div style={{display: 'column', justifyContent: 'center', alignItems: 'center', padding: '40px', backgroundColor: '#222'}}>
+        <MenuHamburguerManagement />
+        <InputAnimationManagement />
     </div>
   )
 }
